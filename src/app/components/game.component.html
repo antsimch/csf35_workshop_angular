@@ -1,0 +1,10 @@
+<table>
+    <tr *ngFor="let game of games">
+        {{game.name}}
+    </tr>
+</table>
+
+<div>
+    <button type="button" *ngIf="pageIndex > 0" (click)="previousPage()">Previous</button>
+    <button type="button" *ngIf="games.length >= gamesPerPage" (click)="nextPage()">Next</button>
+</div>
